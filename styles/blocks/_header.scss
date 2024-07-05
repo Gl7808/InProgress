@@ -1,0 +1,45 @@
+.header {
+  padding-top: 30px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  &__menu{
+
+    &-list {
+      display: flex;
+      column-gap: 32px;
+      align-items: center;
+      color: var(--color-light-gray);
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 42px;
+
+      &:hover{
+        color: var(--color-accent-purple);
+      }
+    }
+  }
+
+  &__buttons{
+    &-list{
+      display: flex;
+      column-gap: 40px;
+      color: var(--color-light-gray);
+      align-items: center;
+    }
+    &-item{
+      &:hover{
+        color: var(--color-accent-purple);
+      }
+    }
+  }
+}

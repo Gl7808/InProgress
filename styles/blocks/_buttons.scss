@@ -1,0 +1,25 @@
+
+.buttons{
+  height: var(--button-height);
+  padding: 16px 8px;
+  transition: var(--transition-duration);
+  &:hover {
+    transition: var(--transition-duration);
+  }
+}
+
+
+.buttons--dark-bg{
+  background-color: var(--color-block);
+  height: 32px;
+  width: 96px;
+  border-radius: var(--border-radius-small);
+  transition: var(--transition-duration);
+  @include flex-center();
+
+  &:hover{
+    background-color: var(--color-accent-purple);
+    color: var(--color-light);
+    transition: var(--transition-duration);
+  }
+}
