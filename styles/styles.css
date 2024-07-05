@@ -20,7 +20,7 @@
   --border-radius-button: 8px;
   --button-height: 44px;
   --input-height: 46px;
-  --transition-duration: 0.2s;
+  --transition-duration: 0.3s;
 }
 
 /**
@@ -236,6 +236,12 @@ h3 {
   font-size: clamp(22px, 1.875vw, 27px);
 }
 
+.title--gradient {
+  background: linear-gradient(90deg, #f83a3a, #f13dd4, #7000FF);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
@@ -288,6 +294,13 @@ h3 {
 .header__menu-link:hover {
   color: var(--color-accent-purple);
 }
+.header__menu-link-new {
+  padding: 2px 6px;
+  background: linear-gradient(#FF5B37, #AB0052);
+  border-radius: 10px;
+  min-width: 34px;
+  color: var(--color-light-gray);
+}
 .header__buttons-list {
   display: flex;
   column-gap: 40px;
@@ -299,12 +312,25 @@ h3 {
 }
 
 .buttons {
-  height: var(--button-height);
   padding: 16px 8px;
   transition: var(--transition-duration);
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 500;
+}
+.buttons:active {
+  outline: none;
 }
 .buttons:hover {
   transition: var(--transition-duration);
+}
+.buttons-light {
+  min-width: 250px;
+  background-color: var(--color-light);
+  outline: none;
+}
+.buttons-light:hover {
+  background: linear-gradient(90deg, #f83a3a, #f13dd4, #7000FF);
 }
 
 .buttons--dark-bg {
@@ -321,6 +347,46 @@ h3 {
   background-color: var(--color-accent-purple);
   color: var(--color-light);
   transition: var(--transition-duration);
+}
+
+.productivity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 100px;
+  background: url("../../images/section_1.png") top no-repeat;
+}
+.productivity__title {
+  font-size: clamp(70px, 5.5555555556vw, 80px);
+  text-align: center;
+  padding-top: 300px;
+}
+.productivity__description {
+  max-width: 650px;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--color-light-gray-2);
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+.productivity__download {
+  margin-top: 60px;
+  text-align: center;
+}
+.productivity__download-description {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+.productivity__download span {
+  padding-left: 10px;
+  color: var(--color-light-gray);
+}
+.productivity__download span:not(:first-child) {
+  border-left: 1px solid var(--color-light-gray);
 }
 
 /*# sourceMappingURL=styles.css.map */

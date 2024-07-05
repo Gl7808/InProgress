@@ -35,3 +35,9 @@ h2{
 h3{
   @include fluid-text(27, 22)
 }
+
+.title--gradient{
+  background: linear-gradient(90deg,#f83a3a,#f13dd4,#7000FF);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

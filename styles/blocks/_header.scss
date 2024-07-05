@@ -27,6 +27,13 @@
         color: var(--color-accent-purple);
       }
     }
+    &-link-new{
+      padding: 2px 6px;
+      background: linear-gradient( #FF5B37, #AB0052);
+      border-radius: 10px;
+      min-width: 34px;
+      color: var(--color-light-gray);
+    }
   }
 
   &__buttons{

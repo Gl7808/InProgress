@@ -1,10 +1,28 @@
 
 .buttons{
-  height: var(--button-height);
   padding: 16px 8px;
   transition: var(--transition-duration);
+  border-radius: var(--border-radius);
+  border:none;
+  font-weight: 500;
+
+  &:active{
+    outline: none;
+  }
   &:hover {
     transition: var(--transition-duration);
+  }
+
+  &-light{
+    min-width: 250px;
+    background-color: var(--color-light);
+    outline: none;
+
+    &:hover{
+      background: linear-gradient(90deg,#f83a3a,#f13dd4,#7000FF);
+
+    }
+
   }
 }
 
@@ -23,3 +41,4 @@
     transition: var(--transition-duration);
   }
 }
+
