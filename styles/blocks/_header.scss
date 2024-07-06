@@ -2,13 +2,31 @@
   padding-top: 30px;
 
   &__inner {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
+    grid-template-columns: repeat(3, 1fr);
+    @include tablet{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include mobile{
+
+    }
+  }
+
+  &__logo{
+    min-width: 120px;
   }
 
   &__menu{
+
+    @include tablet{
+      order: 2;
+
+    }
 
     &-list {
       display: flex;
@@ -37,6 +55,12 @@
   }
 
   &__buttons{
+    margin-left: auto;
+
+    @include tablet{
+      @include visually-hidden;
+    }
+
     &-list{
       display: flex;
       column-gap: 40px;

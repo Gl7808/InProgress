@@ -1,17 +1,19 @@
 .productivity{
   display: flex;
+  max-width: 861px;
+  min-width: 861px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: 100px;
   background: url('../../images/section_1.png') top no-repeat;
-  //background-position: center top;
-  &__title{
-    @include fluid-text(80, 70);
-    text-align: center;
-    padding-top: 300px;
 
+
+
+  &__title{
+    @include fluid-text(80, 60);
+    text-align: center;
+    padding-top: 100px;
   }
 
   &__description{
@@ -40,4 +42,6 @@
       }
     }
   }
+
+
 }

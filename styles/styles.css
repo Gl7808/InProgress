@@ -242,6 +242,10 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
+.title-green {
+  color: var(--color-succsess);
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
@@ -274,10 +278,25 @@ h3 {
   padding-top: 30px;
 }
 .header__inner {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1023px) {
+  .header__inner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+.header__logo {
+  min-width: 120px;
+}
+@media (max-width: 1023px) {
+  .header__menu {
+    order: 2;
+  }
 }
 .header__menu-list {
   display: flex;
@@ -301,6 +320,23 @@ h3 {
   min-width: 34px;
   color: var(--color-light-gray);
 }
+.header__buttons {
+  margin-left: auto;
+}
+@media (max-width: 1023px) {
+  .header__buttons {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0, 0, 0, 0) !important;
+    overflow: hidden !important;
+  }
+}
 .header__buttons-list {
   display: flex;
   column-gap: 40px;
@@ -317,6 +353,7 @@ h3 {
   border-radius: var(--border-radius);
   border: none;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 .buttons:active {
   outline: none;
@@ -351,17 +388,18 @@ h3 {
 
 .productivity {
   display: flex;
+  max-width: 861px;
+  min-width: 861px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: 100px;
   background: url("../../images/section_1.png") top no-repeat;
 }
 .productivity__title {
-  font-size: clamp(70px, 5.5555555556vw, 80px);
+  font-size: clamp(60px, 5.5555555556vw, 80px);
   text-align: center;
-  padding-top: 300px;
+  padding-top: 100px;
 }
 .productivity__description {
   max-width: 650px;
@@ -387,6 +425,26 @@ h3 {
 }
 .productivity__download span:not(:first-child) {
   border-left: 1px solid var(--color-light-gray);
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__header {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+}
+.section__description {
+  color: var(--color-light-gray);
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

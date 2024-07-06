@@ -1,0 +1,22 @@
+.section{
+  padding-block: var(--section-padding-y);
+  @include flex-center();
+
+  &__body{
+  }
+
+  &__header{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  &__description{
+    color: var(--color-light-gray);
+    font-size: 20px;
+  }
+}
