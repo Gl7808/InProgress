@@ -246,6 +246,10 @@ h3 {
   color: var(--color-succsess);
 }
 
+.gradient-bg {
+  background: linear-gradient(140deg, #FFA7A7, #A30CB5, #00173A);
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
@@ -428,10 +432,11 @@ h3 {
 }
 
 .section {
-  padding-block: var(--section-padding-y);
+  padding-top: var(--section-padding-y);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .section__header {
   max-width: 800px;
@@ -445,6 +450,26 @@ h3 {
 .section__description {
   color: var(--color-light-gray);
   font-size: 20px;
+}
+
+.install {
+  margin-top: 230px;
+}
+.install__body {
+  display: flex;
+  flex-direction: column;
+}
+.install__body-block {
+  padding: 60px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+}
+.install__body-block--desription {
+  max-width: 500px;
+}
+.install__body-block-wrapper {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
