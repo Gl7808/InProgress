@@ -36,16 +36,3 @@ h3{
   @include fluid-text(27, 22)
 }
 
-.title--gradient{
-  background: linear-gradient(90deg,#f83a3a,#f13dd4,#7000FF);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.title-green{
-  color: var(--color-succsess)
-}
-
-.gradient-bg{
-  background: linear-gradient(140deg,#FFA7A7,#A30CB5,#00173A);
-}
